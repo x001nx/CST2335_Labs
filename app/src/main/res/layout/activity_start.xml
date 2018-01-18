@@ -7,20 +7,27 @@
     tools:context="com.example.delle6330.androidlabs.StartActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_marginTop="247dp"
         android:text="@string/hello_message"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_width="115dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="176dp"
         android:text="@string/buttonText"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="280dp"></Button>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></Button>
 
 
 </android.support.constraint.ConstraintLayout>
