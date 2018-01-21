@@ -3,4 +3,12 @@
     <string name="app_name">AndroidLabs</string>
     <string name="hello_message">Ola Mundo!</string>
     <string name="buttonText">Sou um botão</string>
+    <string name="login">entrar</string>
+    <string name="login_name">nome do usuario</string>
+    <string name="passwd">senha</string>
+    <string name="switch_text">O que isso faz?</string>
+    <string name="rb">Botão radio</string>
+    <string name="cb">Caixa de verificação</string>
+    <string name="nextScreen">Proxima tela</string>
+    <string name="prevScreen">Tela anterior</string>
 </resources>
