@@ -16,10 +16,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/loginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_name"
         android:inputType="textEmailAddress"
+        android:text="TEXT"
         >
     </EditText>
 
@@ -33,6 +35,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Login" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -50,5 +58,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nextScreen" />
+
 
 </LinearLayout>
