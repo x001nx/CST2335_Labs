@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class StartActivity extends Activity {
     Button button;
@@ -23,6 +24,7 @@ public class StartActivity extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 50);
+
             }
         });}
 
@@ -30,6 +32,14 @@ public class StartActivity extends Activity {
     protected void onActivityResult(int requestCode, int responseCode, Intent data) {
         if (requestCode == 50) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
+        }
+        if (responseCode == Activity.RESULT_OK) {
+            String messagePassed = data.getStringExtra("Response");
+            int duration = Toast.LENGTH_SHORT; //= Toast.LENGTH_LONG if Off
+
+            Toast toast = Toast.makeText(this , messagePassed, duration); //this is the ListActivity
+            toast.show(); //display your message box
+
         }
     }
 

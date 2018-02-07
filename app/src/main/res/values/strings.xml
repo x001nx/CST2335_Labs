@@ -11,4 +11,8 @@
     <string name="nextScreen">Next Screen</string>
     <string name="prevScreen">Previous Screen</string>
     <string name="Login">Login</string>
+    <string name="dialog_message">Do you want to finish the activity?</string>
+    <string name="dialog_title">Alert message</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>
