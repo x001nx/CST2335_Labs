@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 public class StartActivity extends Activity {
     Button button;
+    Button buttonsStartChat;
+    Button weatherButton;
+    Button toolbar;
     protected static final String ACTIVITY_NAME = "StartActivity";
 
     @Override
@@ -18,15 +21,46 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
 
         button = (Button) findViewById(R.id.MyButton);
+        buttonsStartChat = (Button) findViewById(R.id.chatButton);
+        buttonsStartChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+                intent.putExtra("message", "TEST");
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 50);
-
             }
-        });}
+        });
+
+        weatherButton = (Button) findViewById(R.id.weatherButton);
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
+        toolbar = findViewById(R.id.toolbarButton);
+
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StartActivity.this, TestToolbar.class));
+            }
+        });
+
+
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int responseCode, Intent data) {
@@ -41,6 +75,7 @@ public class StartActivity extends Activity {
             toast.show(); //display your message box
 
         }
+
     }
 
         public void onResume() {

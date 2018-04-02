@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:AndroidLabs="http://schemas.android.com/res-auto">
+
+    <item android:id="@+id/action_one"
+        android:title="One"
+        android:icon="@drawable/icons8crab50"
+        android:orderInCategory="110"
+        AndroidLabs:showAsAction="always"
+         />
+
+    <item android:id="@+id/action_two"
+        android:title="Two"
+        android:icon="@drawable/icons8facepalm50"
+        android:orderInCategory="120"
+        AndroidLabs:showAsAction="always"
+        />
+
+    <item android:id="@+id/action_three"
+        android:title="Three"
+        android:icon="@drawable/icons8moneybag50"
+        android:orderInCategory="130"
+        AndroidLabs:showAsAction="always"
+        />
+    <item android:id="@+id/about_item"
+        android:title="About"
+        android:orderInCategory="140"
+        AndroidLabs:showAsAction="never"
+    />
+
+</menu>

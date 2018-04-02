@@ -15,4 +15,14 @@
     <string name="dialog_title">Alert message</string>
     <string name="ok">OK</string>
     <string name="cancel">CANCEL</string>
+    <string name="startChat">Start Chat</string>
+    <string name="sendButton">Send</string>
+    <string name="weatherButton">Weather Forecast</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="toolbar">Toolbar</string>
+    <string name="title_activity_test_toolbar2">TestToolbar2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="dialog_lab8">Do you want to go back?</string>
 </resources>

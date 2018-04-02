@@ -12,4 +12,11 @@
     <string name="nextScreen">Proxima tela</string>
     <string name="prevScreen">Tela anterior</string>
     <string name="Login">Entrar</string>
+    <string name="dialog_message">Terminar resta atividade?</string>
+    <string name="dialog_title">Alerta</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="startChat">Iniciar Chat</string>
+    <string name="buttonSend">Enviar</string>
+    <string name="weatherButton">Previsao de Tempo</string>
 </resources>

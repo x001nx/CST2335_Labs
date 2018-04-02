@@ -26,7 +26,6 @@ public class LoginActivity extends Activity {
         Button buttonLogin;
         SharedPreferences sharedPref = getSharedPreferences("cst2335.lab3", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPref.edit();
-
         txtLoginEmail.setText(sharedPref.getString("login_email", "Defautl@Default.com"));
 
         buttonLogin = findViewById(R.id.buttonLogin);
@@ -40,6 +39,7 @@ public class LoginActivity extends Activity {
 
             }
         });
+
 
         buttonBack = findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(new View.OnClickListener() {
