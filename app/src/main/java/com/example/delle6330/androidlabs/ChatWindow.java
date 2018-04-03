@@ -81,9 +81,9 @@ public class ChatWindow extends Activity {
         cursor.moveToFirst();
         try {
             while (!cursor.isAfterLast()) {
-//                Log.i("********Lab5 " + ACTIVITY_NAME, "SQL MESSAGE: " +
-//                        cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)) + " Cursor possition " +
-//                        cursor.getPosition());
+                Log.i("********Lab5 " + ACTIVITY_NAME, "SQL MESSAGE: " +
+                        cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)) + " Cursor position " +
+                        cursor.getPosition());
                 arrayChat.add(cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
                 cursor.moveToNext();
             }
@@ -175,8 +175,8 @@ public class ChatWindow extends Activity {
         }
     }
     public void deleteMessage(long id){
-        db.delete(dbHelper.TABLE_NAME, dbHelper.KEY_ID +" = " + (int) id, null);
-        db.execSQL("DELETE FROM " + dbHelper.TABLE_NAME + " WHERE " + dbHelper.KEY_ID + " = " + (int) id);
+        db.delete(dbHelper.TABLE_NAME, dbHelper.KEY_ID +"=" +id, null);
+//        db.execSQL("DELETE FROM " + dbHelper.TABLE_NAME + " WHERE " + dbHelper.KEY_ID + " = " + (int) id);
         Log.i("****** deleteMessage", String.valueOf(id));
         arrayChat.remove((int) id);
         if (isTablet) {

@@ -8,14 +8,17 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 public class TestToolbar extends AppCompatActivity {
     Activity activity;
+    String message;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,7 @@ public class TestToolbar extends AppCompatActivity {
                     break;
                 case R.id.action_three:
                     Log.i("******Lab8", "Third Menu Selected");
+                    customDialog();
                     break;
                 case R.id.about_item:
                     Toast.makeText(this, "Version 1.0, by Pavel Jilinski", Toast.LENGTH_SHORT).show();
@@ -71,7 +75,7 @@ public class TestToolbar extends AppCompatActivity {
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                     Log.i("******* Lab8 Dialog", "OK");
-                    finishActivity(1);
+                    finish();
                 }
             });
             builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -80,6 +84,27 @@ public class TestToolbar extends AppCompatActivity {
                 }
             });
             // Create the AlertDialog
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
+        }
+
+        public void customDialog(){
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            View view = getLayoutInflater().inflate(R.layout.lab8dialog, null);
+            final EditText et = view.findViewById(R.id.lab8message);
+            builder.setView(view);
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    Log.i("******* Lab8 Dialog", String.valueOf(et.getText()));
+                    et.getText();
+                }
+            });
+            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                }
+            });
             AlertDialog dialog = builder.create();
             dialog.show();
 

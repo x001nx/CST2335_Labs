@@ -17,6 +17,5 @@
     <string name="ok">OK</string>
     <string name="cancel">CANCELAR</string>
     <string name="startChat">Iniciar Chat</string>
-    <string name="buttonSend">Enviar</string>
     <string name="weatherButton">Previsao de Tempo</string>
 </resources>
